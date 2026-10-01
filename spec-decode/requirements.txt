@@ -1,0 +1,5 @@
+# 측정에 쓴 버전 (Python 3.12, macOS / MPS)
+torch==2.14.1
+transformers==5.18.0
+accelerate
+matplotlib

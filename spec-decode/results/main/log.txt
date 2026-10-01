@@ -1,0 +1,29 @@
+loading models/Qwen3-8B models/Qwen3-0.6B models/Qwen3-1.7B
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7761.75it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 7514.64it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 7316.78it/s]
+T_target(1) = 71.2 ms c[Qwen3-0.6B] = 0.198 c[Qwen3-1.7B] = 0.322
+[19/456] rep0 en_write#0  vanilla 128 tok  2.7 min, 남은 시간 ~61 min
+[38/456] rep0 en_write#1  vanilla 128 tok  5.3 min, 남은 시간 ~59 min
+[57/456] rep0 en_write#2  vanilla 128 tok  8.5 min, 남은 시간 ~60 min
+[76/456] rep0 code#0  vanilla 128 tok  10.3 min, 남은 시간 ~52 min
+[95/456] rep0 code#1  vanilla 128 tok  12.0 min, 남은 시간 ~45 min
+[114/456] rep0 code#2  vanilla 128 tok  14.4 min, 남은 시간 ~43 min
+[133/456] rep0 en2ko#0  vanilla 101 tok  16.5 min, 남은 시간 ~40 min
+[152/456] rep0 en2ko#1  vanilla 85 tok  18.2 min, 남은 시간 ~36 min
+[171/456] rep0 en2ko#2  vanilla 70 tok  19.5 min, 남은 시간 ~32 min
+[190/456] rep0 ko2en#0  vanilla 52 tok  20.3 min, 남은 시간 ~28 min
+[209/456] rep0 ko2en#1  vanilla 49 tok  21.2 min, 남은 시간 ~25 min
+[228/456] rep0 ko2en#2  vanilla 51 tok  22.0 min, 남은 시간 ~22 min
+[247/456] rep1 en_write#0  vanilla 128 tok  24.4 min, 남은 시간 ~21 min
+[266/456] rep1 en_write#1  vanilla 128 tok  26.7 min, 남은 시간 ~19 min
+[285/456] rep1 en_write#2  vanilla 128 tok  29.8 min, 남은 시간 ~18 min
+[304/456] rep1 code#0  vanilla 128 tok  31.6 min, 남은 시간 ~16 min
+[323/456] rep1 code#1  vanilla 128 tok  34.3 min, 남은 시간 ~14 min
+[342/456] rep1 code#2  vanilla 128 tok  39.8 min, 남은 시간 ~13 min
+[361/456] rep1 en2ko#0  vanilla 101 tok  43.9 min, 남은 시간 ~12 min
+[380/456] rep1 en2ko#1  vanilla 85 tok  47.2 min, 남은 시간 ~9 min
+[399/456] rep1 en2ko#2  vanilla 70 tok  50.2 min, 남은 시간 ~7 min
+[418/456] rep1 ko2en#0  vanilla 52 tok  54.3 min, 남은 시간 ~5 min
+/Users/juna/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

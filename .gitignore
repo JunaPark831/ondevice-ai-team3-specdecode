@@ -1,0 +1,5 @@
+옵시디언/
+.DS_Store
+__pycache__/
+.venv/
+spec-decode/models/

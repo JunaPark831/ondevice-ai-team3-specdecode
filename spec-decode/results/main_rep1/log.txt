@@ -1,0 +1,19 @@
+start 00:04:18 load { 11.23 27.45 23.31 }
+loading models/Qwen3-8B models/Qwen3-0.6B models/Qwen3-1.7B
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 6303.80it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 6648.87it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 5958.77it/s]
+T_target(1) = 67.2 ms c[Qwen3-0.6B] = 0.210 c[Qwen3-1.7B] = 0.330
+[26/312] rep1 en_write#0  vanilla 14.1→12.3 tok/s  load 8  5.6 min, 남은 시간 ~61 min
+[52/312] rep1 en_write#1  vanilla 12.3→13.2 tok/s  load 8  10.5 min, 남은 시간 ~53 min
+[78/312] rep1 en_write#2  vanilla 13.2→12.6 tok/s  load 7  16.9 min, 남은 시간 ~51 min
+[104/312] rep1 code#0  vanilla 12.6→14.4 tok/s  load 8  20.0 min, 남은 시간 ~40 min
+[130/312] rep1 code#1  vanilla 14.4→14.2 tok/s  load 5  22.6 min, 남은 시간 ~32 min
+[156/312] rep1 code#2  vanilla 14.1→14.5 tok/s  load 4  26.3 min, 남은 시간 ~26 min
+[182/312] rep1 en2ko#0  vanilla 14.3→14.2 tok/s  load 4  29.7 min, 남은 시간 ~21 min
+[208/312] rep1 en2ko#1  vanilla 14.2→14.3 tok/s  load 7  32.5 min, 남은 시간 ~16 min
+[234/312] rep1 en2ko#2  vanilla 14.3→14.6 tok/s  load 5  34.9 min, 남은 시간 ~12 min
+[260/312] rep1 ko2en#0  vanilla 14.8→15.0 tok/s  load 5  36.2 min, 남은 시간 ~7 min
+[286/312] rep1 ko2en#1  vanilla 14.8→15.0 tok/s  load 4  37.7 min, 남은 시간 ~3 min
+[312/312] rep1 ko2en#2  vanilla 14.8→15.1 tok/s  load 3  38.9 min, 남은 시간 ~0 min
+saved results/main_rep1
