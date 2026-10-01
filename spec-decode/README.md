@@ -20,6 +20,6 @@ aria2c -i models.txt -x 16 -s 16 -j 8 -c          # Qwen3-0.6B / 1.7B / 8B → m
 
 측정 중에는 같은 컴퓨터에서 다른 무거운 작업을 돌리지 않는다. `bench.py` 가 블록마다 vanilla 를 앞뒤로 재서 10% 넘게 흔들린 블록은 `plot.py` 가 자동으로 뺀다.
 
-결과 해석은 [`docs/W02-research-log.html`](../docs/W02-research-log.html) (브라우저로 열기).
+결과 해석은 [`docs/W02-research-log.md`](../docs/W02-research-log.md).
 
 `results/main/runs_rep1_contaminated.csv` 는 측정 중 다른 프로세스 부하로 오염된 2회차 원본이다. 분석에서는 빼고 `results/main_rep1` 로 다시 쟀다.

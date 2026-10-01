@@ -9,7 +9,8 @@
 | 경로 | 내용 |
 |---|---|
 | [`spec-decode/`](spec-decode/) | Leviathan(ICML 2023) speculative decoding 직접 구현 + 속도 측정 코드, 실험 결과 |
-| [`docs/W02-research-log.html`](docs/W02-research-log.html) | Week 02 연구 로그 (브라우저로 열기) |
+| [`docs/W02-research-log.md`](docs/W02-research-log.md) | Week 02 연구 로그 (GitHub에서 바로 읽기) |
+| [W02 연구 로그 웹페이지](https://junapark831.github.io/ondevice-ai-team3-specdecode/W02-research-log.html) | 같은 내용의 HTML 버전 (`docs/W02-research-log.html`) |
 
 ## 지금까지 결과 (W02, Apple M5 Pro 노트북)
 
@@ -27,7 +28,7 @@ Qwen3-8B target + Qwen3-0.6B / 1.7B draft, greedy, batch 1, 12프롬프트(en_wr
 - 실측 α·c를 넣은 Leviathan 식이 역전 위치를 맞춘다 (모든 γ에서 실측과 0.01~0.08 차이)
 - en→ko α(0.69)는 ko→en(0.76)보다 낮지만 영어 자유작문(0.60)보다 높다 — 원문 내용·토큰 길이 통제 전
 
-자세한 수치는 [`spec-decode/results/combined/summary.md`](spec-decode/results/combined/summary.md), 해석과 경쟁 설명은 W02 연구 로그.
+자세한 수치는 [`spec-decode/results/combined/summary.md`](spec-decode/results/combined/summary.md), 해석과 경쟁 설명은 [W02 연구 로그](docs/W02-research-log.md).
 
 ## 재현
 
