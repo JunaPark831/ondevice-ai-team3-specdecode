@@ -1,0 +1,828 @@
+{
+ "target": "Qwen3-8B",
+ "skipped": [],
+ "tokenizers": {
+  "Qwen3-8B": {
+   "repo": "Qwen/Qwen3-8B",
+   "type": "byte-level BPE, NFC",
+   "vocab_size": 151669,
+   "n_bytes": 151655,
+   "inter_qwen": 151643,
+   "hangul_vocab": 2512,
+   "hangul_whole": {
+    "types": 0.5487804878048781,
+    "occ": 0.9322445376296623,
+    "n_types": 656,
+    "n_occ": 9062
+   },
+   "gran": {
+    "en": {
+     "bytes_per_tok": 4.78490990990991,
+     "chars_per_tok": 4.777777777777778,
+     "n_tok": 5328
+    },
+    "ko": {
+     "bytes_per_tok": 3.542824471126358,
+     "chars_per_tok": 1.4695254431103488,
+     "n_tok": 8745
+    },
+    "ja": {
+     "bytes_per_tok": 4.270544783010157,
+     "chars_per_tok": 1.4545574462471969,
+     "n_tok": 7581
+    },
+    "zh": {
+     "bytes_per_tok": 4.3427935447968835,
+     "chars_per_tok": 1.543683917640512,
+     "n_tok": 5391
+    },
+    "de": {
+     "bytes_per_tok": 3.6342314168871783,
+     "chars_per_tok": 3.573490497955256,
+     "n_tok": 8314
+    }
+   },
+   "cov": {
+    "en": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": null,
+     "nonfrag": 1.0,
+     "n": 21772,
+     "n_native": 18561,
+     "n_frag": 0
+    },
+    "ko": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": 1.0,
+     "nonfrag": 1.0,
+     "n": 26658,
+     "n_native": 24070,
+     "n_frag": 3800
+    },
+    "ja": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": 1.0,
+     "nonfrag": 1.0,
+     "n": 23546,
+     "n_native": 20575,
+     "n_frag": 1647
+    },
+    "zh": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": 1.0,
+     "nonfrag": 1.0,
+     "n": 15212,
+     "n_native": 12600,
+     "n_frag": 8
+    },
+    "de": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": null,
+     "nonfrag": 1.0,
+     "n": 8174,
+     "n_native": 7298,
+     "n_frag": 0
+    }
+   },
+   "hf_class": "Qwen2Tokenizer",
+   "hf_diff": 0,
+   "same_vocab": {
+    "Qwen2.5-0.5B": 4
+   }
+  },
+  "Qwen2.5-0.5B": {
+   "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+   "type": "byte-level BPE, NFC",
+   "vocab_size": 151665,
+   "n_bytes": 151651,
+   "inter_qwen": 151643,
+   "hangul_vocab": 2512,
+   "hangul_whole": {
+    "types": 0.5487804878048781,
+    "occ": 0.9322445376296623,
+    "n_types": 656,
+    "n_occ": 9062
+   },
+   "gran": {
+    "en": {
+     "bytes_per_tok": 4.78490990990991,
+     "chars_per_tok": 4.777777777777778,
+     "n_tok": 5328
+    },
+    "ko": {
+     "bytes_per_tok": 3.542824471126358,
+     "chars_per_tok": 1.4695254431103488,
+     "n_tok": 8745
+    },
+    "ja": {
+     "bytes_per_tok": 4.270544783010157,
+     "chars_per_tok": 1.4545574462471969,
+     "n_tok": 7581
+    },
+    "zh": {
+     "bytes_per_tok": 4.3427935447968835,
+     "chars_per_tok": 1.543683917640512,
+     "n_tok": 5391
+    },
+    "de": {
+     "bytes_per_tok": 3.6342314168871783,
+     "chars_per_tok": 3.573490497955256,
+     "n_tok": 8314
+    }
+   },
+   "cov": {
+    "en": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": null,
+     "nonfrag": 1.0,
+     "n": 21772,
+     "n_native": 18561,
+     "n_frag": 0
+    },
+    "ko": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": 1.0,
+     "nonfrag": 1.0,
+     "n": 26658,
+     "n_native": 24070,
+     "n_frag": 3800
+    },
+    "ja": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": 1.0,
+     "nonfrag": 1.0,
+     "n": 23546,
+     "n_native": 20575,
+     "n_frag": 1647
+    },
+    "zh": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": 1.0,
+     "nonfrag": 1.0,
+     "n": 15212,
+     "n_native": 12600,
+     "n_frag": 8
+    },
+    "de": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": null,
+     "nonfrag": 1.0,
+     "n": 8174,
+     "n_native": 7298,
+     "n_frag": 0
+    }
+   },
+   "hf_class": "Qwen2Tokenizer",
+   "hf_diff": 0,
+   "same_vocab": {
+    "Qwen3-8B": 4
+   }
+  },
+  "Llama-3.2-1B": {
+   "repo": "unsloth/Llama-3.2-1B-Instruct",
+   "type": "byte-level BPE",
+   "vocab_size": 128256,
+   "n_bytes": 128000,
+   "inter_qwen": 109566,
+   "hangul_vocab": 599,
+   "hangul_whole": {
+    "types": 0.7149390243902439,
+    "occ": 0.968660339880821,
+    "n_types": 656,
+    "n_occ": 9062
+   },
+   "gran": {
+    "en": {
+     "bytes_per_tok": 4.852303007232584,
+     "chars_per_tok": 4.845070422535211,
+     "n_tok": 5254
+    },
+    "ko": {
+     "bytes_per_tok": 3.9312270016495368,
+     "chars_per_tok": 1.6306306306306306,
+     "n_tok": 7881
+    },
+    "ja": {
+     "bytes_per_tok": 4.0428321678321675,
+     "chars_per_tok": 1.376998001998002,
+     "n_tok": 8008
+    },
+    "zh": {
+     "bytes_per_tok": 3.4602423884126514,
+     "chars_per_tok": 1.2299733963937334,
+     "n_tok": 6766
+    },
+    "de": {
+     "bytes_per_tok": 3.6294294294294294,
+     "chars_per_tok": 3.5687687687687686,
+     "n_tok": 8325
+    }
+   },
+   "cov": {
+    "en": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": null,
+     "nonfrag": 1.0,
+     "n": 21772,
+     "n_native": 18561,
+     "n_frag": 0
+    },
+    "ko": {
+     "all": 0.9781303923775226,
+     "native": 0.9771499792272539,
+     "frag": 0.9971052631578947,
+     "nonfrag": 0.9749759384023099,
+     "n": 26658,
+     "n_native": 24070,
+     "n_frag": 3800
+    },
+    "ja": {
+     "all": 0.8953113055296016,
+     "native": 0.8801944106925881,
+     "frag": 0.9993928354584092,
+     "nonfrag": 0.8874834467327275,
+     "n": 23546,
+     "n_native": 20575,
+     "n_frag": 1647
+    },
+    "zh": {
+     "all": 0.7262029976334473,
+     "native": 0.6694444444444444,
+     "frag": 1.0,
+     "nonfrag": 0.7260589318600368,
+     "n": 15212,
+     "n_native": 12600,
+     "n_frag": 8
+    },
+    "de": {
+     "all": 0.990457548323954,
+     "native": 0.9893121403124143,
+     "frag": null,
+     "nonfrag": 0.990457548323954,
+     "n": 8174,
+     "n_native": 7298,
+     "n_frag": 0
+    }
+   },
+   "hf_class": "TokenizersBackend",
+   "hf_diff": 0,
+   "same_vocab": {
+    "kanana-1.5-2.1b": 0
+   }
+  },
+  "kanana-1.5-2.1b": {
+   "repo": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "type": "byte-level BPE",
+   "vocab_size": 128259,
+   "n_bytes": 128000,
+   "inter_qwen": 109566,
+   "hangul_vocab": 599,
+   "hangul_whole": {
+    "types": 0.7149390243902439,
+    "occ": 0.968660339880821,
+    "n_types": 656,
+    "n_occ": 9062
+   },
+   "gran": {
+    "en": {
+     "bytes_per_tok": 4.852303007232584,
+     "chars_per_tok": 4.845070422535211,
+     "n_tok": 5254
+    },
+    "ko": {
+     "bytes_per_tok": 3.9312270016495368,
+     "chars_per_tok": 1.6306306306306306,
+     "n_tok": 7881
+    },
+    "ja": {
+     "bytes_per_tok": 4.0428321678321675,
+     "chars_per_tok": 1.376998001998002,
+     "n_tok": 8008
+    },
+    "zh": {
+     "bytes_per_tok": 3.4602423884126514,
+     "chars_per_tok": 1.2299733963937334,
+     "n_tok": 6766
+    },
+    "de": {
+     "bytes_per_tok": 3.6294294294294294,
+     "chars_per_tok": 3.5687687687687686,
+     "n_tok": 8325
+    }
+   },
+   "cov": {
+    "en": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": null,
+     "nonfrag": 1.0,
+     "n": 21772,
+     "n_native": 18561,
+     "n_frag": 0
+    },
+    "ko": {
+     "all": 0.9781303923775226,
+     "native": 0.9771499792272539,
+     "frag": 0.9971052631578947,
+     "nonfrag": 0.9749759384023099,
+     "n": 26658,
+     "n_native": 24070,
+     "n_frag": 3800
+    },
+    "ja": {
+     "all": 0.8953113055296016,
+     "native": 0.8801944106925881,
+     "frag": 0.9993928354584092,
+     "nonfrag": 0.8874834467327275,
+     "n": 23546,
+     "n_native": 20575,
+     "n_frag": 1647
+    },
+    "zh": {
+     "all": 0.7262029976334473,
+     "native": 0.6694444444444444,
+     "frag": 1.0,
+     "nonfrag": 0.7260589318600368,
+     "n": 15212,
+     "n_native": 12600,
+     "n_frag": 8
+    },
+    "de": {
+     "all": 0.990457548323954,
+     "native": 0.9893121403124143,
+     "frag": null,
+     "nonfrag": 0.990457548323954,
+     "n": 8174,
+     "n_native": 7298,
+     "n_frag": 0
+    }
+   },
+   "hf_class": "TokenizersBackend",
+   "hf_diff": 0,
+   "same_vocab": {
+    "Llama-3.2-1B": 0
+   }
+  },
+  "HyperCLOVAX-SEED-0.5B": {
+   "repo": "naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-0.5B",
+   "type": "byte-level BPE, NFC",
+   "vocab_size": 110524,
+   "n_bytes": 110470,
+   "inter_qwen": 100822,
+   "hangul_vocab": 886,
+   "hangul_whole": {
+    "types": 0.8780487804878049,
+    "occ": 0.971970867358199,
+    "n_types": 656,
+    "n_occ": 9062
+   },
+   "gran": {
+    "en": {
+     "bytes_per_tok": 4.849533954727031,
+     "chars_per_tok": 4.842305497431996,
+     "n_tok": 5257
+    },
+    "ko": {
+     "bytes_per_tok": 4.840181221684112,
+     "chars_per_tok": 2.0076550538978286,
+     "n_tok": 6401
+    },
+    "ja": {
+     "bytes_per_tok": 2.699266299816575,
+     "chars_per_tok": 0.9193763548440888,
+     "n_tok": 11994
+    },
+    "zh": {
+     "bytes_per_tok": 2.3569918453639382,
+     "chars_per_tok": 0.8378133494412564,
+     "n_tok": 9933
+    },
+    "de": {
+     "bytes_per_tok": 3.6211649089165867,
+     "chars_per_tok": 3.5606423777564715,
+     "n_tok": 8344
+    }
+   },
+   "cov": {
+    "en": {
+     "all": 1.0,
+     "native": 1.0,
+     "frag": null,
+     "nonfrag": 1.0,
+     "n": 21772,
+     "n_native": 18561,
+     "n_frag": 0
+    },
+    "ko": {
+     "all": 0.9956485857903818,
+     "native": 0.9975903614457832,
+     "frag": 0.9986842105263158,
+     "nonfrag": 0.9951439321025461,
+     "n": 26658,
+     "n_native": 24070,
+     "n_frag": 3800
+    },
+    "ja": {
+     "all": 0.5904187547778816,
+     "native": 0.5323450789793439,
+     "frag": 0.9222829386763813,
+     "nonfrag": 0.5654596100278552,
+     "n": 23546,
+     "n_native": 20575,
+     "n_frag": 1647
+    },
+    "zh": {
+     "all": 0.45003944254535894,
+     "native": 0.3362698412698413,
+     "frag": 1.0,
+     "nonfrag": 0.4497500657721652,
+     "n": 15212,
+     "n_native": 12600,
+     "n_frag": 8
+    },
+    "de": {
+     "all": 0.9903352091999021,
+     "native": 0.9891751164702658,
+     "frag": null,
+     "nonfrag": 0.9903352091999021,
+     "n": 8174,
+     "n_native": 7298,
+     "n_frag": 0
+    }
+   },
+   "hf_class": "GPT2Tokenizer",
+   "hf_diff": 171,
+   "same_vocab": {}
+  },
+  "EXAONE-3.5-2.4B": {
+   "repo": "LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct",
+   "type": "byte-level BPE, NFKC",
+   "vocab_size": 102400,
+   "n_bytes": 102074,
+   "inter_qwen": 51559,
+   "hangul_vocab": 1399,
+   "hangul_whole": {
+    "types": 0.9908536585365854,
+    "occ": 0.9990068417567866,
+    "n_types": 656,
+    "n_occ": 9062
+   },
+   "gran": {
+    "en": {
+     "bytes_per_tok": 4.771476698483998,
+     "chars_per_tok": 4.764364589182107,
+     "n_tok": 5343
+    },
+    "ko": {
+     "bytes_per_tok": 4.638718371013625,
+     "chars_per_tok": 1.9240904326995059,
+     "n_tok": 6679
+    },
+    "ja": {
+     "bytes_per_tok": 2.98855349395366,
+     "chars_per_tok": 1.017908243330564,
+     "n_tok": 10833
+    },
+    "zh": {
+     "bytes_per_tok": 2.0987897803675484,
+     "chars_per_tok": 0.746033168982519,
+     "n_tok": 11155
+    },
+    "de": {
+     "bytes_per_tok": 3.1408523908523907,
+     "chars_per_tok": 3.0883575883575882,
+     "n_tok": 9620
+    }
+   },
+   "cov": {
+    "en": {
+     "all": 0.9826382509645416,
+     "native": 0.9811432573675988,
+     "frag": null,
+     "nonfrag": 0.9826382509645416,
+     "n": 21772,
+     "n_native": 18561,
+     "n_frag": 0
+    },
+    "ko": {
+     "all": 0.9224247880561183,
+     "native": 0.9190693809721645,
+     "frag": 0.9321052631578948,
+     "nonfrag": 0.9208154694198968,
+     "n": 26658,
+     "n_native": 24070,
+     "n_frag": 3800
+    },
+    "ja": {
+     "all": 0.6293637985220419,
+     "native": 0.642138517618469,
+     "frag": 0.9568913175470553,
+     "nonfrag": 0.6047308096260103,
+     "n": 23546,
+     "n_native": 20575,
+     "n_frag": 1647
+    },
+    "zh": {
+     "all": 0.28707599263739153,
+     "native": 0.22833333333333333,
+     "frag": 0.875,
+     "nonfrag": 0.2867666403578006,
+     "n": 15212,
+     "n_native": 12600,
+     "n_frag": 8
+    },
+    "de": {
+     "all": 0.8475654514313677,
+     "native": 0.830090435735818,
+     "frag": null,
+     "nonfrag": 0.8475654514313677,
+     "n": 8174,
+     "n_native": 7298,
+     "n_frag": 0
+    }
+   },
+   "hf_class": "GPT2Tokenizer",
+   "hf_diff": 199,
+   "same_vocab": {
+    "EXAONE-4.0-1.2B": 6
+   }
+  },
+  "EXAONE-4.0-1.2B": {
+   "repo": "LGAI-EXAONE/EXAONE-4.0-1.2B",
+   "type": "byte-level BPE",
+   "vocab_size": 102400,
+   "n_bytes": 102080,
+   "inter_qwen": 51559,
+   "hangul_vocab": 1399,
+   "hangul_whole": {
+    "types": 0.9908536585365854,
+    "occ": 0.9990068417567866,
+    "n_types": 656,
+    "n_occ": 9062
+   },
+   "gran": {
+    "en": {
+     "bytes_per_tok": 4.770583832335329,
+     "chars_per_tok": 4.763473053892215,
+     "n_tok": 5344
+    },
+    "ko": {
+     "bytes_per_tok": 4.638023952095808,
+     "chars_per_tok": 1.9238023952095809,
+     "n_tok": 6680
+    },
+    "ja": {
+     "bytes_per_tok": 2.9685494223363285,
+     "chars_per_tok": 1.0110948101962223,
+     "n_tok": 10906
+    },
+    "zh": {
+     "bytes_per_tok": 1.9810458622440346,
+     "chars_per_tok": 0.7041800643086816,
+     "n_tok": 11818
+    },
+    "de": {
+     "bytes_per_tok": 3.1405259328552124,
+     "chars_per_tok": 3.088036586633406,
+     "n_tok": 9621
+    }
+   },
+   "cov": {
+    "en": {
+     "all": 0.9826382509645416,
+     "native": 0.9811432573675988,
+     "frag": null,
+     "nonfrag": 0.9826382509645416,
+     "n": 21772,
+     "n_native": 18561,
+     "n_frag": 0
+    },
+    "ko": {
+     "all": 0.9224247880561183,
+     "native": 0.9190693809721645,
+     "frag": 0.9321052631578948,
+     "nonfrag": 0.9208154694198968,
+     "n": 26658,
+     "n_native": 24070,
+     "n_frag": 3800
+    },
+    "ja": {
+     "all": 0.6293637985220419,
+     "native": 0.642138517618469,
+     "frag": 0.9568913175470553,
+     "nonfrag": 0.6047308096260103,
+     "n": 23546,
+     "n_native": 20575,
+     "n_frag": 1647
+    },
+    "zh": {
+     "all": 0.28707599263739153,
+     "native": 0.22833333333333333,
+     "frag": 0.875,
+     "nonfrag": 0.2867666403578006,
+     "n": 15212,
+     "n_native": 12600,
+     "n_frag": 8
+    },
+    "de": {
+     "all": 0.8475654514313677,
+     "native": 0.830090435735818,
+     "frag": null,
+     "nonfrag": 0.8475654514313677,
+     "n": 8174,
+     "n_native": 7298,
+     "n_frag": 0
+    }
+   },
+   "hf_class": "GPT2Tokenizer",
+   "hf_diff": 0,
+   "same_vocab": {
+    "EXAONE-3.5-2.4B": 6
+   }
+  },
+  "gemma-3-1b": {
+   "repo": "unsloth/gemma-3-1b-it",
+   "type": "SentencePiece BPE + byte fallback",
+   "vocab_size": 262145,
+   "n_bytes": 262026,
+   "inter_qwen": 95968,
+   "hangul_vocab": 1733,
+   "hangul_whole": {
+    "types": 0.9954268292682927,
+    "occ": 0.999448245420437,
+    "n_types": 656,
+    "n_occ": 9062
+   },
+   "gran": {
+    "en": {
+     "bytes_per_tok": 4.904578684109273,
+     "chars_per_tok": 4.897268180069258,
+     "n_tok": 5198
+    },
+    "ko": {
+     "bytes_per_tok": 4.27396882328597,
+     "chars_per_tok": 1.7727962477583115,
+     "n_tok": 7249
+    },
+    "ja": {
+     "bytes_per_tok": 5.044406357120598,
+     "chars_per_tok": 1.7181364911187287,
+     "n_tok": 6418
+    },
+    "zh": {
+     "bytes_per_tok": 4.148856990962254,
+     "chars_per_tok": 1.4747474747474747,
+     "n_tok": 5643
+    },
+    "de": {
+     "bytes_per_tok": 4.363807047949162,
+     "chars_per_tok": 4.290872328134027,
+     "n_tok": 6924
+    }
+   },
+   "cov": {
+    "en": {
+     "all": 0.9888388756200625,
+     "native": 0.9869080329723614,
+     "frag": null,
+     "nonfrag": 0.9888388756200625,
+     "n": 21772,
+     "n_native": 18561,
+     "n_frag": 0
+    },
+    "ko": {
+     "all": 0.9280141045839898,
+     "native": 0.9222268383880349,
+     "frag": 0.5231578947368422,
+     "nonfrag": 0.9953189255402922,
+     "n": 26658,
+     "n_native": 24070,
+     "n_frag": 3800
+    },
+    "ja": {
+     "all": 0.9552790282850591,
+     "native": 0.9492588092345079,
+     "frag": 0.4990892531876138,
+     "nonfrag": 0.989588565687931,
+     "n": 23546,
+     "n_native": 20575,
+     "n_frag": 1647
+    },
+    "zh": {
+     "all": 0.9244017880620563,
+     "native": 0.9092857142857143,
+     "frag": 0.375,
+     "nonfrag": 0.9246908708234675,
+     "n": 15212,
+     "n_native": 12600,
+     "n_frag": 8
+    },
+    "de": {
+     "all": 0.9869097137264498,
+     "native": 0.9853384488901069,
+     "frag": null,
+     "nonfrag": 0.9869097137264498,
+     "n": 8174,
+     "n_native": 7298,
+     "n_frag": 0
+    }
+   },
+   "hf_class": "GemmaTokenizer",
+   "hf_diff": 0,
+   "same_vocab": {}
+  }
+ },
+ "overlap": {
+  "Qwen3-8B": {
+   "Qwen3-8B": 151655,
+   "Qwen2.5-0.5B": 151651,
+   "Llama-3.2-1B": 109566,
+   "kanana-1.5-2.1b": 109566,
+   "HyperCLOVAX-SEED-0.5B": 100822,
+   "EXAONE-3.5-2.4B": 51559,
+   "EXAONE-4.0-1.2B": 51563,
+   "gemma-3-1b": 95968
+  },
+  "Qwen2.5-0.5B": {
+   "Qwen3-8B": 151651,
+   "Qwen2.5-0.5B": 151651,
+   "Llama-3.2-1B": 109566,
+   "kanana-1.5-2.1b": 109566,
+   "HyperCLOVAX-SEED-0.5B": 100822,
+   "EXAONE-3.5-2.4B": 51559,
+   "EXAONE-4.0-1.2B": 51561,
+   "gemma-3-1b": 95968
+  },
+  "Llama-3.2-1B": {
+   "Qwen3-8B": 109566,
+   "Qwen2.5-0.5B": 109566,
+   "Llama-3.2-1B": 128000,
+   "kanana-1.5-2.1b": 128000,
+   "HyperCLOVAX-SEED-0.5B": 102323,
+   "EXAONE-3.5-2.4B": 52205,
+   "EXAONE-4.0-1.2B": 52205,
+   "gemma-3-1b": 86434
+  },
+  "kanana-1.5-2.1b": {
+   "Qwen3-8B": 109566,
+   "Qwen2.5-0.5B": 109566,
+   "Llama-3.2-1B": 128000,
+   "kanana-1.5-2.1b": 128000,
+   "HyperCLOVAX-SEED-0.5B": 102323,
+   "EXAONE-3.5-2.4B": 52205,
+   "EXAONE-4.0-1.2B": 52205,
+   "gemma-3-1b": 86434
+  },
+  "HyperCLOVAX-SEED-0.5B": {
+   "Qwen3-8B": 100822,
+   "Qwen2.5-0.5B": 100822,
+   "Llama-3.2-1B": 102323,
+   "kanana-1.5-2.1b": 102323,
+   "HyperCLOVAX-SEED-0.5B": 110470,
+   "EXAONE-3.5-2.4B": 55223,
+   "EXAONE-4.0-1.2B": 55223,
+   "gemma-3-1b": 70468
+  },
+  "EXAONE-3.5-2.4B": {
+   "Qwen3-8B": 51559,
+   "Qwen2.5-0.5B": 51559,
+   "Llama-3.2-1B": 52205,
+   "kanana-1.5-2.1b": 52205,
+   "HyperCLOVAX-SEED-0.5B": 55223,
+   "EXAONE-3.5-2.4B": 102074,
+   "EXAONE-4.0-1.2B": 102074,
+   "gemma-3-1b": 62665
+  },
+  "EXAONE-4.0-1.2B": {
+   "Qwen3-8B": 51563,
+   "Qwen2.5-0.5B": 51561,
+   "Llama-3.2-1B": 52205,
+   "kanana-1.5-2.1b": 52205,
+   "HyperCLOVAX-SEED-0.5B": 55223,
+   "EXAONE-3.5-2.4B": 102074,
+   "EXAONE-4.0-1.2B": 102080,
+   "gemma-3-1b": 62665
+  },
+  "gemma-3-1b": {
+   "Qwen3-8B": 95968,
+   "Qwen2.5-0.5B": 95968,
+   "Llama-3.2-1B": 86434,
+   "kanana-1.5-2.1b": 86434,
+   "HyperCLOVAX-SEED-0.5B": 70468,
+   "EXAONE-3.5-2.4B": 62665,
+   "EXAONE-4.0-1.2B": 62665,
+   "gemma-3-1b": 262026
+  }
+ }
+}

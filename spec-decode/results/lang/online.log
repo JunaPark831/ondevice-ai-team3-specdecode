@@ -1,0 +1,218 @@
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 6819.67it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 5328.61it/s]
+{"ctx_en": {"T_t(1) ms": 516.5813965140842, "c[Qwen3-0.6B]": 0.02612144777471268}, "ctx_ko": {"T_t(1) ms": 77.4238120066002, "c[Qwen3-0.6B]": 0.17649097322493573}}
+[1/168] en→de#617 vanilla 14.5→14.5 tok/s load 5 swapins 44 0.1 min, 남은 ~24 min
+[2/168] ja→en#195 vanilla 14.2→14.2 tok/s load 5 swapins 59 0.2 min, 남은 ~18 min
+[3/168] ko→ja#188 vanilla 14.5→14.9 tok/s load 5 swapins 120 0.4 min, 남은 ~23 min
+[4/168] ko→ja#684 vanilla 14.8→14.9 tok/s load 4 swapins 1435 0.7 min, 남은 ~28 min
+[5/168] zh→ja#803 vanilla 15.1→14.4 tok/s load 4 swapins 1220 0.9 min, 남은 ~28 min
+[6/168] ja→zh#991 vanilla 15.0→14.7 tok/s load 4 swapins 456 1.0 min, 남은 ~28 min
+[7/168] en→zh#188 vanilla 12.5→10.7 tok/s load 4 swapins 72 1.2 min, 남은 ~28 min
+[8/168] en→ja#684 vanilla 11.6→11.1 tok/s load 3 swapins 3103 1.7 min, 남은 ~34 min
+[9/168] en→zh#617 vanilla 11.7→13.2 tok/s load 4 swapins 1504 1.8 min, 남은 ~31 min
+[10/168] ja→ko#188 vanilla 10.0→12.5 tok/s load 4 swapins 1092 2.1 min, 남은 ~33 min
+[11/168] en→de#991 vanilla 11.2→11.2 tok/s load 4 swapins 2492 2.5 min, 남은 ~35 min
+[12/168] ko→zh#991 vanilla 12.5→12.8 tok/s load 4 swapins 180 2.7 min, 남은 ~35 min
+[13/168] de→en#195 vanilla 11.4→13.7 tok/s load 4 swapins 64 2.8 min, 남은 ~34 min
+[14/168] en→ko#991 vanilla 13.1→13.6 tok/s load 3 swapins 624 3.2 min, 남은 ~35 min
+[15/168] en→de#338 vanilla 13.3→13.4 tok/s load 3 swapins 1291 3.5 min, 남은 ~36 min
+[16/168] ja→en#991 vanilla 13.5→13.8 tok/s load 4 swapins 26406 3.7 min, 남은 ~35 min
+[17/168] ko→en#992 vanilla 15.1→14.2 tok/s load 5 swapins 348 3.9 min, 남은 ~34 min
+[18/168] zh→en#534 vanilla 14.0→14.0 tok/s load 4 swapins 32 4.0 min, 남은 ~33 min
+[19/168] en→zh#640 vanilla 13.6→14.5 tok/s load 4 swapins 24 4.1 min, 남은 ~32 min
+[20/168] ja→ko#640 vanilla 14.4→14.6 tok/s load 4 swapins 652 4.2 min, 남은 ~31 min
+[21/168] zh→ko#617 vanilla 14.4→13.5 tok/s load 4 swapins 1152 4.3 min, 남은 ~30 min
+[22/168] en→ja#640 vanilla 13.2→15.0 tok/s load 4 swapins 9098 4.4 min, 남은 ~29 min
+[23/168] en→ja#101 vanilla 14.4→14.5 tok/s load 4 swapins 23910 4.7 min, 남은 ~30 min
+[24/168] en→ko#101 vanilla 14.9→13.5 tok/s load 4 swapins 80 5.0 min, 남은 ~30 min
+[25/168] en→ja#991 vanilla 13.6→14.1 tok/s load 4 swapins 132 5.3 min, 남은 ~31 min
+[26/168] ja→zh#803 vanilla 14.3→14.0 tok/s load 3 swapins 760 5.5 min, 남은 ~30 min
+[27/168] ja→ko#338 vanilla 14.1→14.2 tok/s load 3 swapins 6129 5.8 min, 남은 ~30 min
+[28/168] en→zh#803 vanilla 14.4→13.3 tok/s load 6 swapins 224 5.9 min, 남은 ~29 min
+[29/168] ja→en#803 vanilla 12.7→14.1 tok/s load 6 swapins 68 6.0 min, 남은 ~29 min
+[30/168] en→de#101 vanilla 13.3→14.9 tok/s load 6 swapins 9100 6.3 min, 남은 ~29 min
+[31/168] ja→ko#534 vanilla 14.2→14.9 tok/s load 6 swapins 1591 6.6 min, 남은 ~29 min
+[32/168] en→ja#534 vanilla 14.4→14.3 tok/s load 5 swapins 360 6.8 min, 남은 ~29 min
+[33/168] zh→ja#640 vanilla 14.0→14.4 tok/s load 5 swapins 104 6.9 min, 남은 ~28 min
+[34/168] ja→zh#640 vanilla 13.9→14.2 tok/s load 5 swapins 288 7.0 min, 남은 ~28 min
+[35/168] ko→zh#871 vanilla 15.0→14.6 tok/s load 5 swapins 152 7.1 min, 남은 ~27 min
+[36/168] ja→en#188 vanilla 14.6→14.3 tok/s load 5 swapins 1396 7.3 min, 남은 ~27 min
+[37/168] en→ko#534 vanilla 13.8→14.8 tok/s load 4 swapins 1068 7.5 min, 남은 ~26 min
+[38/168] zh→en#991 vanilla 14.3→13.3 tok/s load 4 swapins 13226 7.7 min, 남은 ~26 min
+[39/168] en→ko#617 vanilla 14.1→12.9 tok/s load 4 swapins 9872 7.9 min, 남은 ~26 min
+[40/168] ja→en#617 vanilla 12.9→12.0 tok/s load 5 swapins 4692 8.0 min, 남은 ~25 min
+[41/168] ko→ja#195 vanilla 11.8→13.5 tok/s load 4 swapins 7954 8.2 min, 남은 ~25 min
+[42/168] en→ko#992 vanilla 13.7→15.1 tok/s load 5 swapins 1357 8.6 min, 남은 ~26 min
+[43/168] ko→ja#803 vanilla 15.3→14.5 tok/s load 5 swapins 172 8.8 min, 남은 ~26 min
+[44/168] de→en#991 vanilla 14.5→15.0 tok/s load 5 swapins 44 9.0 min, 남은 ~25 min
+[45/168] de→en#338 vanilla 15.3→15.4 tok/s load 4 swapins 20 9.1 min, 남은 ~25 min
+[46/168] en→ko#195 vanilla 15.3→14.9 tok/s load 4 swapins 108 9.3 min, 남은 ~25 min
+[47/168] ja→zh#195 vanilla 15.2→15.4 tok/s load 4 swapins 36 9.4 min, 남은 ~24 min
+[48/168] en→zh#338 vanilla 15.2→15.3 tok/s load 3 swapins 12 9.5 min, 남은 ~24 min
+[49/168] zh→ja#534 vanilla 15.3→15.3 tok/s load 3 swapins 16 9.7 min, 남은 ~23 min
+[50/168] ja→en#534 vanilla 15.1→15.2 tok/s load 4 swapins 60 9.8 min, 남은 ~23 min
+[51/168] en→ja#338 vanilla 14.9→15.2 tok/s load 4 swapins 52 10.0 min, 남은 ~23 min
+[52/168] en→de#684 vanilla 14.9→14.5 tok/s load 3 swapins 44 10.2 min, 남은 ~23 min
+[53/168] en→ko#803 vanilla 14.4→15.3 tok/s load 4 swapins 442 10.4 min, 남은 ~23 min
+[54/168] en→zh#871 vanilla 15.1→15.4 tok/s load 3 swapins 52 10.5 min, 남은 ~22 min
+[55/168] ko→ja#101 vanilla 15.2→15.2 tok/s load 3 swapins 292 10.8 min, 남은 ~22 min
+[56/168] en→de#640 vanilla 15.2→15.4 tok/s load 3 swapins 2504 10.9 min, 남은 ~22 min
+[57/168] ja→zh#871 vanilla 15.4→15.1 tok/s load 3 swapins 108 10.9 min, 남은 ~21 min
+[58/168] de→en#992 vanilla 14.2→14.4 tok/s load 3 swapins 236 11.1 min, 남은 ~21 min
+[59/168] ko→en#188 vanilla 13.9→13.8 tok/s load 3 swapins 84 11.2 min, 남은 ~21 min
+[60/168] en→ja#617 vanilla 13.7→14.8 tok/s load 3 swapins 43044 11.4 min, 남은 ~20 min
+[61/168] en→ko#338 vanilla 14.9→13.6 tok/s load 3 swapins 1934 11.6 min, 남은 ~20 min
+[62/168] ja→ko#195 vanilla 14.5→14.2 tok/s load 4 swapins 80863 11.8 min, 남은 ~20 min
+[63/168] ko→en#101 vanilla 13.0→14.4 tok/s load 4 swapins 2935 12.1 min, 남은 ~20 min
+[64/168] en→de#188 vanilla 13.6→12.3 tok/s load 4 swapins 1692 12.3 min, 남은 ~20 min
+[65/168] en→ja#188 vanilla 13.1→14.1 tok/s load 4 swapins 1081 12.6 min, 남은 ~20 min
+[66/168] en→zh#101 vanilla 13.3→14.2 tok/s load 5 swapins 559 12.9 min, 남은 ~20 min
+[67/168] en→ko#188 vanilla 12.7→14.2 tok/s load 5 swapins 1531 13.2 min, 남은 ~20 min
+[68/168] de→en#684 vanilla 13.4→12.6 tok/s load 5 swapins 1413 13.3 min, 남은 ~20 min
+[69/168] en→de#195 vanilla 12.2→13.7 tok/s load 5 swapins 565 13.5 min, 남은 ~19 min
+[70/168] zh→en#684 vanilla 13.8→13.9 tok/s load 5 swapins 1055 13.6 min, 남은 ~19 min
+[71/168] ja→zh#338 vanilla 13.6→14.2 tok/s load 5 swapins 2793 13.8 min, 남은 ~19 min
+[72/168] ja→ko#617 vanilla 13.0→13.5 tok/s load 5 swapins 1099 13.9 min, 남은 ~19 min
+[73/168] en→zh#195 vanilla 12.0→13.7 tok/s load 5 swapins 2737 14.0 min, 남은 ~18 min
+[74/168] zh→ja#991 vanilla 13.6→13.4 tok/s load 5 swapins 1325 14.4 min, 남은 ~18 min
+[75/168] ko→ja#534 vanilla 13.7→13.5 tok/s load 6 swapins 1863 14.6 min, 남은 ~18 min
+[76/168] zh→en#871 vanilla 12.1→14.0 tok/s load 5 swapins 3375 14.6 min, 남은 ~18 min
+[77/168] ja→en#684 vanilla 14.2→14.2 tok/s load 6 swapins 2183 14.8 min, 남은 ~18 min
+[78/168] ko→zh#640 vanilla 13.6→13.3 tok/s load 7 swapins 28 14.9 min, 남은 ~17 min
+[79/168] zh→ko#684 vanilla 13.0→12.6 tok/s load 7 swapins 192 15.2 min, 남은 ~17 min
+[80/168] en→de#871 vanilla 12.9→14.2 tok/s load 7 swapins 32 15.3 min, 남은 ~17 min
+[81/168] ko→en#195 vanilla 13.1→13.7 tok/s load 8 swapins 91 15.4 min, 남은 ~17 min
+[82/168] ko→en#338 vanilla 14.6→14.4 tok/s load 7 swapins 72 15.6 min, 남은 ~16 min
+[83/168] ko→zh#188 vanilla 14.8→14.7 tok/s load 7 swapins 36 15.7 min, 남은 ~16 min
+[84/168] en→de#803 vanilla 14.4→13.4 tok/s load 7 swapins 855 15.9 min, 남은 ~16 min
+[85/168] de→en#640 vanilla 11.9→13.2 tok/s load 7 swapins 599 16.0 min, 남은 ~16 min
+[86/168] de→en#871 vanilla 13.2→13.8 tok/s load 7 swapins 147 16.0 min, 남은 ~15 min
+[87/168] ko→en#617 vanilla 14.3→12.9 tok/s load 7 swapins 1661 16.1 min, 남은 ~15 min
+[88/168] en→zh#534 vanilla 12.8→12.9 tok/s load 7 swapins 195 16.3 min, 남은 ~15 min
+[89/168] zh→ko#101 vanilla 12.6→12.4 tok/s load 7 swapins 775 16.7 min, 남은 ~15 min
+[90/168] ja→zh#684 vanilla 12.5→12.9 tok/s load 7 swapins 137 16.9 min, 남은 ~15 min
+[91/168] zh→en#338 vanilla 12.4→13.5 tok/s load 7 swapins 84 17.1 min, 남은 ~14 min
+[92/168] ko→zh#992 vanilla 14.3→13.9 tok/s load 7 swapins 88 17.3 min, 남은 ~14 min
+[93/168] zh→ko#871 vanilla 13.7→14.1 tok/s load 7 swapins 88 17.4 min, 남은 ~14 min
+[94/168] ja→en#101 vanilla 12.8→14.3 tok/s load 6 swapins 336 17.7 min, 남은 ~14 min
+[95/168] zh→ko#992 vanilla 13.3→14.3 tok/s load 6 swapins 3568 18.0 min, 남은 ~14 min
+[96/168] ja→zh#992 vanilla 14.1→14.2 tok/s load 5 swapins 151 18.3 min, 남은 ~14 min
+[97/168] ko→ja#991 vanilla 13.6→14.8 tok/s load 5 swapins 191 18.6 min, 남은 ~14 min
+[98/168] ja→ko#101 vanilla 14.6→13.5 tok/s load 5 swapins 160 18.9 min, 남은 ~14 min
+[99/168] zh→ko#188 vanilla 13.2→14.0 tok/s load 5 swapins 2717 19.2 min, 남은 ~13 min
+[100/168] ko→zh#617 vanilla 14.6→14.2 tok/s load 4 swapins 0 19.2 min, 남은 ~13 min
+[101/168] de→en#617 vanilla 14.1→13.8 tok/s load 4 swapins 12 19.3 min, 남은 ~13 min
+[102/168] ko→zh#338 vanilla 13.2→12.7 tok/s load 4 swapins 627 19.5 min, 남은 ~13 min
+[103/168] en→zh#992 vanilla 12.6→13.5 tok/s load 4 swapins 236 19.7 min, 남은 ~12 min
+[104/168] ko→zh#195 vanilla 12.8→13.5 tok/s load 5 swapins 180 19.8 min, 남은 ~12 min
+[105/168] en→zh#684 vanilla 13.4→13.9 tok/s load 5 swapins 32 20.0 min, 남은 ~12 min
+[106/168] zh→ko#338 vanilla 13.8→14.6 tok/s load 4 swapins 136 20.2 min, 남은 ~12 min
+[107/168] zh→ja#101 vanilla 14.1→14.6 tok/s load 4 swapins 148 20.5 min, 남은 ~12 min
+[108/168] zh→ja#338 vanilla 13.6→15.0 tok/s load 4 swapins 12 20.6 min, 남은 ~11 min
+[109/168] zh→ko#534 vanilla 14.9→13.1 tok/s load 4 swapins 501 20.8 min, 남은 ~11 min
+[110/168] ja→ko#684 vanilla 13.4→14.4 tok/s load 4 swapins 656 21.2 min, 남은 ~11 min
+[111/168] ko→ja#338 vanilla 14.4→14.3 tok/s load 4 swapins 96 21.3 min, 남은 ~11 min
+[112/168] ja→zh#101 vanilla 14.4→14.5 tok/s load 4 swapins 228 21.6 min, 남은 ~11 min
+[113/168] en→ja#803 vanilla 14.2→14.1 tok/s load 5 swapins 24 21.8 min, 남은 ~11 min
+[114/168] ko→ja#871 vanilla 13.8→13.9 tok/s load 4 swapins 72 21.9 min, 남은 ~10 min
+[115/168] zh→en#188 vanilla 13.5→13.9 tok/s load 4 swapins 12 22.0 min, 남은 ~10 min
+[116/168] zh→ja#992 vanilla 14.0→14.1 tok/s load 7 swapins 248 22.4 min, 남은 ~10 min
+[117/168] zh→ja#188 vanilla 14.3→13.5 tok/s load 8 swapins 1018 22.6 min, 남은 ~10 min
+[118/168] ja→en#338 vanilla 13.2→14.8 tok/s load 7 swapins 28 22.7 min, 남은 ~10 min
+[119/168] zh→ko#640 vanilla 14.5→12.8 tok/s load 6 swapins 16 22.9 min, 남은 ~9 min
+[120/168] de→en#101 vanilla 13.0→14.9 tok/s load 6 swapins 99 23.1 min, 남은 ~9 min
+[121/168] zh→ja#871 vanilla 15.0→12.9 tok/s load 5 swapins 80 23.3 min, 남은 ~9 min
+[122/168] zh→ko#195 vanilla 12.9→13.1 tok/s load 5 swapins 428 23.6 min, 남은 ~9 min
+[123/168] zh→en#803 vanilla 13.8→13.3 tok/s load 5 swapins 64 23.8 min, 남은 ~9 min
+[124/168] ko→zh#684 vanilla 13.2→13.9 tok/s load 5 swapins 108 23.9 min, 남은 ~8 min
+[125/168] ja→ko#991 vanilla 13.5→14.6 tok/s load 5 swapins 1164 24.2 min, 남은 ~8 min
+[126/168] ko→ja#617 vanilla 14.0→14.1 tok/s load 5 swapins 308 24.4 min, 남은 ~8 min
+[127/168] ja→zh#617 vanilla 14.4→14.5 tok/s load 5 swapins 48 24.4 min, 남은 ~8 min
+[128/168] zh→en#640 vanilla 13.7→13.5 tok/s load 5 swapins 110 24.5 min, 남은 ~8 min
+/Users/juna/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+== online(이어서) 17:00:55
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 6468.24it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 6400.91it/s]
+이어 돌리기: 끝난 블록 128개 건너뜀
+{"ctx_en": {"T_t(1) ms": 74.10768803674728, "c[Qwen3-0.6B]": 0.18875094264832082}, "ctx_ko": {"T_t(1) ms": 75.95108303939924, "c[Qwen3-0.6B]": 0.17932183425954604}}
+[129/168] ko→en#991 vanilla 14.0→14.5 tok/s load 5 swapins 402 0.3 min, 남은 ~10 min
+[130/168] de→en#803 vanilla 13.9→13.5 tok/s load 5 swapins 188 0.4 min, 남은 ~7 min
+[131/168] en→zh#991 vanilla 12.9→13.6 tok/s load 5 swapins 511 0.6 min, 남은 ~8 min
+[132/168] ko→en#803 vanilla 13.3→14.0 tok/s load 5 swapins 710 0.8 min, 남은 ~7 min
+[133/168] ja→en#992 vanilla 14.4→13.8 tok/s load 5 swapins 168 0.9 min, 남은 ~6 min
+[134/168] zh→ja#617 vanilla 13.9→13.9 tok/s load 5 swapins 1407 1.1 min, 남은 ~6 min
+[135/168] en→ko#640 vanilla 13.7→14.0 tok/s load 5 swapins 412 1.2 min, 남은 ~6 min
+[136/168] ko→ja#992 vanilla 13.7→12.0 tok/s load 5 swapins 493 1.5 min, 남은 ~6 min
+[137/168] ko→zh#101 vanilla 12.3→12.0 tok/s load 6 swapins 516 1.8 min, 남은 ~6 min
+[138/168] ko→en#871 vanilla 11.1→13.3 tok/s load 6 swapins 1159 1.9 min, 남은 ~6 min
+[139/168] ko→en#640 vanilla 13.2→12.8 tok/s load 6 swapins 400 2.0 min, 남은 ~5 min
+[140/168] zh→ja#195 vanilla 12.2→10.6 tok/s load 6 swapins 576 2.3 min, 남은 ~5 min
+[141/168] zh→en#101 vanilla 11.3→9.6 tok/s load 11 swapins 1491 2.6 min, 남은 ~5 min
+[142/168] ja→zh#188 vanilla 9.5→12.6 tok/s load 16 swapins 3214 2.8 min, 남은 ~5 min
+[143/168] ja→en#871 vanilla 12.1→10.8 tok/s load 15 swapins 1164 2.9 min, 남은 ~5 min
+[144/168] zh→en#992 vanilla 11.3→9.9 tok/s load 14 swapins 765 3.1 min, 남은 ~5 min
+[145/168] ja→ko#871 vanilla 10.4→13.2 tok/s load 14 swapins 972 3.3 min, 남은 ~4 min
+[146/168] en→ko#684 vanilla 11.6→11.0 tok/s load 13 swapins 2445 3.7 min, 남은 ~4 min
+[147/168] de→en#188 vanilla 11.6→11.8 tok/s load 12 swapins 1205 3.8 min, 남은 ~4 min
+[148/168] ko→zh#803 vanilla 10.7→12.9 tok/s load 12 swapins 379 4.0 min, 남은 ~4 min
+[149/168] zh→ko#803 vanilla 11.9→13.8 tok/s load 11 swapins 190 4.3 min, 남은 ~4 min
+[150/168] zh→en#617 vanilla 13.8→13.7 tok/s load 10 swapins 609 4.4 min, 남은 ~4 min
+[151/168] zh→ja#684 vanilla 13.6→12.7 tok/s load 10 swapins 794 4.7 min, 남은 ~3 min
+[152/168] ja→ko#992 vanilla 11.7→11.5 tok/s load 9 swapins 2221 5.1 min, 남은 ~3 min
+[153/168] zh→ko#991 vanilla 12.7→13.7 tok/s load 7 swapins 507 5.5 min, 남은 ~3 min
+[154/168] ja→zh#534 vanilla 11.1→13.5 tok/s load 6 swapins 166 5.7 min, 남은 ~3 min
+[155/168] zh→en#195 vanilla 12.7→13.9 tok/s load 7 swapins 39 5.8 min, 남은 ~3 min
+[156/168] ko→en#534 vanilla 13.4→13.3 tok/s load 7 swapins 139 6.0 min, 남은 ~3 min
+[157/168] en→de#534 vanilla 12.9→13.4 tok/s load 8 swapins 260 6.2 min, 남은 ~2 min
+[158/168] en→ko#871 vanilla 13.1→12.2 tok/s load 8 swapins 1143 6.4 min, 남은 ~2 min
+[159/168] de→en#534 vanilla 9.2→11.2 tok/s load 7 swapins 684 6.5 min, 남은 ~2 min
+[160/168] ko→ja#640 vanilla 9.9→12.4 tok/s load 7 swapins 40 6.6 min, 남은 ~2 min
+[161/168] en→de#992 vanilla 11.7→11.5 tok/s load 7 swapins 415 6.9 min, 남은 ~1 min
+[162/168] ko→zh#534 vanilla 10.5→12.0 tok/s load 7 swapins 64 7.1 min, 남은 ~1 min
+[163/168] ja→en#640 vanilla 11.0→12.3 tok/s load 14 swapins 32 7.3 min, 남은 ~1 min
+[164/168] ko→en#684 vanilla 10.6→11.1 tok/s load 13 swapins 56 7.5 min, 남은 ~1 min
+[165/168] ja→ko#803 vanilla 11.6→12.1 tok/s load 16 swapins 54487 7.7 min, 남은 ~1 min
+[166/168] en→ja#871 vanilla 11.3→13.7 tok/s load 15 swapins 119 7.9 min, 남은 ~0 min
+[167/168] en→ja#992 vanilla 12.1→12.8 tok/s load 14 swapins 324 8.2 min, 남은 ~0 min
+[168/168] en→ja#195 vanilla 11.8→13.4 tok/s load 12 swapins 187 8.3 min, 남은 ~0 min
+[redo] en→zh#188 vanilla 10.3→12.1 tok/s
+[redo] en→zh#617 vanilla 11.7→11.8 tok/s
+[redo] ja→ko#188 vanilla 12.7→13.2 tok/s
+[redo] de→en#195 vanilla 9.9→13.1 tok/s
+[redo] en→ja#640 vanilla 12.2→11.9 tok/s
+[redo] ja→en#803 vanilla 13.3→11.6 tok/s
+[redo] en→de#101 vanilla 11.3→11.9 tok/s
+[redo] ko→ja#195 vanilla 11.4→10.0 tok/s
+[redo] ko→en#101 vanilla 9.4→10.0 tok/s
+[redo] en→ko#188 vanilla 10.6→12.2 tok/s
+[redo] en→de#195 vanilla 11.5→12.3 tok/s
+[redo] en→zh#195 vanilla 10.3→13.5 tok/s
+[redo] zh→en#871 vanilla 13.2→13.4 tok/s
+[redo] en→de#871 vanilla 14.0→13.7 tok/s
+[redo] de→en#640 vanilla 13.7→13.8 tok/s
+[redo] ja→en#101 vanilla 13.1→13.3 tok/s
+[redo] zh→ja#338 vanilla 12.4→13.1 tok/s
+[redo] zh→ko#534 vanilla 11.6→12.4 tok/s
+[redo] ja→en#338 vanilla 11.5→13.0 tok/s
+[redo] zh→ko#640 vanilla 13.4→12.5 tok/s
+[redo] de→en#101 vanilla 11.6→12.6 tok/s
+[redo] zh→ja#871 vanilla 12.0→12.1 tok/s
+[redo] ko→ja#992 vanilla 11.9→10.9 tok/s
+[redo] ko→en#871 vanilla 12.2→12.0 tok/s
+[redo] zh→ja#195 vanilla 10.4→11.4 tok/s
+[redo] zh→en#101 vanilla 10.7→10.6 tok/s
+[redo] ja→zh#188 vanilla 11.0→11.7 tok/s
+[redo] ja→en#871 vanilla 11.0→12.2 tok/s
+[redo] zh→en#992 vanilla 11.1→12.4 tok/s
+[redo] ja→ko#871 vanilla 11.8→10.0 tok/s
+[redo] ko→zh#803 vanilla 10.5→10.7 tok/s
+[redo] zh→ko#803 vanilla 10.1→10.9 tok/s
+[redo] ja→zh#534 vanilla 10.8→12.2 tok/s
+[redo] de→en#534 vanilla 10.8→11.8 tok/s
+[redo] ko→ja#640 vanilla 11.3→11.9 tok/s
+[redo] ko→zh#534 vanilla 11.8→12.2 tok/s
+[redo] ja→en#640 vanilla 11.1→12.6 tok/s
+[redo] en→ja#871 vanilla 12.5→12.5 tok/s
+[redo] en→ja#195 vanilla 11.0→12.3 tok/s
+{"ctx_en": {"T_t(1) ms": 86.99266653275117, "c[Qwen3-0.6B]": 0.2622476795401568}, "ctx_ko": {"T_t(1) ms": 80.81287547247484, "c[Qwen3-0.6B]": 0.4218418138756391}}
