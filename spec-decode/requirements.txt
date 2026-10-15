@@ -3,3 +3,5 @@ torch==2.14.1
 transformers==5.18.0
 accelerate
 matplotlib
+numpy
+sacrebleu

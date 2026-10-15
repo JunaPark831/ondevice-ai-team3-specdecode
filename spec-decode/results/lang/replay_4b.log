@@ -1,0 +1,4 @@
+== replay 4B 17:59:21
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 6123.59it/s]
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 7923.43it/s]
+replayed Qwen3-4B-Instruct-2507 164

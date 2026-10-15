@@ -2,7 +2,7 @@
 
 - Apple M5 Pro 48GB · mps · bfloat16 · torch 2.14.1 · transformers 5.18.0 · 2026-10-02T00:04:29
 - target `models/Qwen3-8B` · drafts `models/Qwen3-0.6B`, `models/Qwen3-1.7B` · greedy · max_new 128 · 프롬프트 4태스크×3
-- 데이터: results/main, results/main_rep1 · 블록 24개 사용 (드리프트 검사 12개 중 2개 제외: rep1 code#0 +14%, rep1 en_write#0 -13%)
+- 데이터: results/main, results/main_rep1 · 블록 22개 사용 (전체 24개 중 드리프트 검사 12개, 그중 2개 제외: rep1 code#0 +14%, rep1 en_write#0 -13%)
 
 ## forward 비용 (ctx 76 토큰, median)
 

@@ -38,10 +38,9 @@ van = {block(r): r for r in rows if r["draft"] == "vanilla"}
 after = {block(r): r for r in rows if r["draft"] == "vanilla_after"}
 drift = {k: float(after[k]["decode_tps"]) / float(van[k]["decode_tps"]) - 1 for k in after}
 bad = {k for k, x in drift.items() if abs(x) > 0.10}
-n_blocks = len(van)
-drift_note = (f"블록 {n_blocks}개 사용 (드리프트 검사 {len(drift)}개 중 {len(bad)}개 제외: "
+n_blocks = len(van) - len(bad)  # 실제 분석에 쓴 블록 수 (제외 후)
+drift_note = (f"블록 {n_blocks}개 사용 (전체 {len(van)}개 중 드리프트 검사 {len(drift)}개, 그중 {len(bad)}개 제외: "
               + ", ".join(f"rep{k[0]} {k[1]}#{k[2]} {drift[k]:+.0%}" for k in sorted(bad)) + ")") if drift else f"블록 {n_blocks}개 (드리프트 검사 없음)"
-n_blocks -= len(bad)
 print(drift_note)
 
 G = defaultdict(list)  # (draft, γ, task) → runs.  task="all" 은 전체

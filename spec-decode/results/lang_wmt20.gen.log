@@ -1,0 +1,10 @@
+== wmt20 gen 17:35:47
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 6506.64it/s]
+400 jobs (skip 0)
+[64/400] 0.1 min · 176 tok/s · 남은 ~1 min
+[128/400] 0.3 min · 160 tok/s · 남은 ~1 min
+[192/400] 0.5 min · 173 tok/s · 남은 ~1 min
+[256/400] 0.8 min · 169 tok/s · 남은 ~0 min
+[320/400] 1.1 min · 171 tok/s · 남은 ~0 min
+[384/400] 1.6 min · 172 tok/s · 남은 ~0 min
+[400/400] 2.1 min · 146 tok/s · 남은 ~0 min
