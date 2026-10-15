@@ -79,3 +79,25 @@ FLORES-200 같은 200문장을 en·ko·ja·zh 12방향 + en↔de 로 번역시�
 `results/lang/contaminated_online_swap.csv` 는 다른 작업의 메모리 압박(swap)으로 vanilla 가 15 → 2 tok/s 까지 떨어진 첫 실측 원본이다. 분석에서 빼고 target + 0.6B 만 올려 다시 쟀다 (`online.csv`, 블록마다 swap-in 기록).
 
 `sd.py` 는 2026-10-14 에 수락·거절 집계만 고쳤다 (EOS 뒤 토큰까지 세던 것). 생성과 시간 측정은 그대로라 W02 의 실측 speedup 은 유효하다. 영향을 받는 것은 EOS 로 끝난 번역 태스크(en2ko·ko2en)의 α 와 τ = (A+라운드)/라운드 로 계산한 비용모델 예측이다 (en_write·code 는 128토큰에서 잘려 EOS 가 없었다).
+
+## Q2-a · Windows 노트북 비용 곡선 (W04)
+
+llama.cpp `llama-bench` 로 하드웨어 조건마다 c(draft 1토큰 ÷ target 1토큰)와 r(k)(target 이 k토큰을 한 번에 검증 ÷ 1토큰 생성)를 잰다. τ 는 하드웨어와 무관하므로 `results/lang` 의 score 결과를 그대로 쓰고, speedup 은 S(γ) = τ(γ) / (γ·c + r(γ+1)) 로 예측한다 (Q2-b).
+
+| 파일 | 내용 |
+|---|---|
+| `q2_costs.py` | 조건(CPU 2·4·8·16 스레드, iGPU Vulkan Q8_0·Q4_K_M) × target·draft llama-bench → `results/q2_costs/raw.jsonl`, `costs.csv`, `summary.md`, `env.json` |
+| `models/gguf/` | Qwen 공식 GGUF: Qwen3-8B Q8_0·Q4_K_M, Qwen3-0.6B·1.7B Q8_0 (gitignore) |
+
+```bash
+python -I q2_costs.py run --dry-run          # 실행할 llama-bench 명령만 출력
+python -I q2_costs.py run                    # 전체 조건. 끊겨도 다시 돌리면 끝난 조건은 건너뜀
+python -I q2_costs.py run --conds cpu-t8 igpu
+python -I q2_costs.py summary                # raw.jsonl → costs.csv, summary.md 다시 만들기
+```
+
+- llama.cpp 는 저장소 밖 `../../tools/llama.cpp-b11430/{cpu,vulkan}` (공식 Windows 릴리스 b11430 = v0.6.0 커밋, `--llama-dir` 로 바꿈).
+- 조건 하나 = target(pp k, tg) → draft 들 → target tg 다시. 앞뒤 target tg 가 10% 넘게 다르면 그 블록을 다시 잰다 (`--drift`, `--retry`).
+- r(k) 의 기준은 pp1 이 아니라 tg 1토큰이다. llama.cpp 는 1토큰 생성과 묶음 처리가 다른 커널이라 iGPU 에서 pp1 이 tg 보다 느릴 수 있다 (`r(1)` 열로 확인).
+- 측정 전: 전원 연결, Windows 전원 모드 '최고 성능', 다른 무거운 프로그램 종료. 배터리면 실행을 멈춘다 (`--allow-battery` 로 무시). 전원 상태와 남은 RAM 은 `env.json`·`raw.jsonl` 에 기록된다.
+- llama-bench 는 target 과 draft 를 따로 잰다. 실제 SD 에서 둘이 메모리를 같이 쓰는 영향은 Q2-c(llama-server `-md`) 실측으로 확인한다. 릴리스에 `llama-speculative-simple` 은 없다.
