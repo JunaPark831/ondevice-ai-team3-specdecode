@@ -45,10 +45,23 @@ PROMPTS = {
 }
 
 DEV = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
+DTYPE = torch.bfloat16  # --device / --dtype 로 바꿈 (E0: --device cpu --dtype float32)
 
 
 def load(name):
-    return AutoModelForCausalLM.from_pretrained(name, dtype=torch.bfloat16).to(DEV).eval()
+    return AutoModelForCausalLM.from_pretrained(name, dtype=DTYPE).to(DEV).eval()
+
+
+def sh(*cmd):
+    """sysctl 등 macOS 전용 명령. 다른 OS 에서는 빈 문자열"""
+    try:
+        return subprocess.run(cmd, capture_output=True, text=True).stdout.strip()
+    except OSError:
+        return ""
+
+
+def loadavg():
+    return os.getloadavg()[0] if hasattr(os, "getloadavg") else -1.0
 
 
 def short(name):
@@ -72,6 +85,7 @@ def fwd_time(model, ctx, k, reps=10):
 
 
 def main():
+    global DEV, DTYPE
     ap = argparse.ArgumentParser()
     ap.add_argument("--target", default="models/Qwen3-8B")
     ap.add_argument("--drafts", nargs="+", default=["models/Qwen3-0.6B", "models/Qwen3-1.7B"])
@@ -81,8 +95,11 @@ def main():
     ap.add_argument("--max-new", type=int, default=128)
     ap.add_argument("--reps", type=int, default=2)
     ap.add_argument("--first-rep", type=int, default=0)  # 일부 반복만 다시 돌릴 때
+    ap.add_argument("--device", default=str(DEV))  # mps / cuda / cpu
+    ap.add_argument("--dtype", default="bfloat16", choices=["bfloat16", "float16", "float32"])
     ap.add_argument("--out", default="results/main")
     args = ap.parse_args()
+    DEV, DTYPE = torch.device(args.device), getattr(torch, args.dtype)
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -99,11 +116,11 @@ def main():
     drafts = {short(d): (target if d == args.target else load(d)) for d in args.drafts}
 
     env = dict(date=datetime.now().isoformat(timespec="seconds"), device=str(DEV),
-               chip=subprocess.run(["sysctl", "-n", "machdep.cpu.brand_string"], capture_output=True, text=True).stdout.strip(),
-               mem_gb=round(int(subprocess.run(["sysctl", "-n", "hw.memsize"], capture_output=True, text=True).stdout) / 2**30),
+               chip=sh("sysctl", "-n", "machdep.cpu.brand_string") or platform.processor(),
+               mem_gb=round(int(sh("sysctl", "-n", "hw.memsize") or 0) / 2**30),
                macos=platform.mac_ver()[0], python=platform.python_version(),
                torch=torch.__version__, transformers=transformers.__version__,
-               dtype="bfloat16", **{k: v for k, v in vars(args).items() if k != "out"})
+               **{k: v for k, v in vars(args).items() if k not in ("out", "device")})
     (out / "env.json").write_text(json.dumps(env, indent=2, ensure_ascii=False))
 
     # 1) forward 비용: target 은 k=1..13 토큰(검증 비용), draft 는 1토큰 → c = T_d(1) / T_t(1)
@@ -131,7 +148,7 @@ def main():
         for task in args.tasks:
             for pid, p in enumerate(PROMPTS[task][: args.n_prompts]):
                 ids = encode(p)
-                load_avg = os.getloadavg()[0]  # 다른 프로세스가 끼어들었는지 확인용
+                load_avg = loadavg()  # 다른 프로세스가 끼어들었는지 확인용
                 ref, st = generate(target, ids, args.max_new, eos=eos)
                 runs = [("vanilla", 0, ref, st)]
                 order = configs[:]
@@ -156,6 +173,9 @@ def main():
                 print(f"[{done}/{total_runs}] rep{rep} {task}#{pid}  vanilla {tps[0]:.1f}→{tps[1]:.1f} tok/s  load {load_avg:.0f}  "
                       f"{el / 60:.1f} min, 남은 시간 ~{el / done * (total_runs - done) / 60:.0f} min", flush=True)
     f.close()
+    # E0: greedy 면 SD 출력은 vanilla 와 같아야 한다 (fp32 에서 100% 인지 확인)
+    sd_rows = [r for r in csv.DictReader(open(out / "runs.csv")) if not r["draft"].startswith("vanilla")]
+    print("vanilla와 출력 동일: %d / %d" % (sum(r["same"] == "True" for r in sd_rows), len(sd_rows)))
     print("saved", out)
 
 
