@@ -4,3 +4,4 @@ transformers==5.18.0
 accelerate
 matplotlib
 numpy
+sacrebleu

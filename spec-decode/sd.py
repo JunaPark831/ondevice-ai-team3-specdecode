@@ -64,7 +64,7 @@ def generate(target, prompt, max_new, draft=None, gamma=4, temperature=0.0, eos=
     seq = list(prompt)
     t_cache = DynamicCache()
     d_cache = DynamicCache()
-    st = dict(rounds=0, drafted=0, accepted=0, rejects=0, t_draft=0.0, t_verify=0.0)
+    st = dict(rounds=0, drafted=0, accepted=0, rejects=0, t_draft=0.0, t_verify=0.0, log=[])
 
     sync(dev)
     t0 = time.perf_counter()
@@ -97,10 +97,15 @@ def generate(target, prompt, max_new, draft=None, gamma=4, temperature=0.0, eos=
         tc = time.perf_counter()
 
         n = len(new) - 1
+        rej = n < gamma
+        e = next((k for k, t in enumerate(new) if t in eos), len(new))
+        if e < n:  # EOS 가 수락된 draft 안에 있다 → 그 뒤 비교는 출력에 안 들어가므로 수락·거절로 세지 않는다
+            n, rej = e + 1, False  # (2026-10-14 수정: 전에는 EOS 뒤 토큰까지 셌다 — W02 번역 태스크 α 에 영향)
         st["rounds"] += 1
         st["drafted"] += gamma
         st["accepted"] += n
-        st["rejects"] += n < gamma
+        st["rejects"] += rej
+        st["log"].append((len(seq) - len(prompt), n, rej))  # (라운드 시작 위치 = 지금까지 출력 수, 수락, 거절)
         st["t_draft"] += tb - ta
         st["t_verify"] += tc - tb
 
