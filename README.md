@@ -10,6 +10,7 @@
 |---|---|
 | [`spec-decode/`](spec-decode/) | Leviathan(ICML 2023) speculative decoding 직접 구현 + 속도 측정 코드, 실험 결과 |
 | [`docs/W03-research-log.md`](docs/W03-research-log.md) | Week 03 연구 로그 — FLORES 언어 행렬 (EXP-003) |
+| [`docs/H1-hypothesis-rationale.md`](docs/H1-hypothesis-rationale.md) | H1은 왜 이렇게 세웠나 — 절마다 근거, W03 뒤 점검, 고쳐 쓸 후보 |
 | [`docs/W02-research-log.md`](docs/W02-research-log.md) | Week 02 연구 로그 (GitHub에서 바로 읽기) |
 | [W03 연구 로그 웹페이지](https://junapark831.github.io/ondevice-ai-team3-specdecode/W03-research-log.html) | 같은 내용의 HTML 버전 (`docs/W03-research-log.html`, 구글 문서 복사 버튼) |
 | [W02 연구 로그 웹페이지](https://junapark831.github.io/ondevice-ai-team3-specdecode/W02-research-log.html) | 같은 내용의 HTML 버전 (`docs/W02-research-log.html`) |
