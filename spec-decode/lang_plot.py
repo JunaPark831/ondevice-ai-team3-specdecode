@@ -856,7 +856,8 @@ if ON_ROWS:
             if not ys:
                 cells.append("·")
                 continue
-            pr = np.nanmean([x.get("pred_off", np.nan) for x in ys])
+            pred = np.array([x.get("pred_off", np.nan) for x in ys], dtype=float)
+            pr = np.nanmean(pred) if np.isfinite(pred).any() else np.nan
             cells.append(f"{np.mean([x['sp'] for x in ys]):.2f}" + (f" (예측 {pr:.2f})" if not np.isnan(pr) else ""))
         L.append(f"| {n} γ={g}{f' T={temp}' if temp else ''} | " + " | ".join(cells) + " |")
     for (n, g, temp), xs in sorted(ON.items()):

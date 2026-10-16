@@ -267,7 +267,7 @@ def online(args):
     fields = ["src", "tgt", "sid", "attempt", "draft", "gamma", "temp", "n_new", "ttft", "total", "decode_tps", "rounds",
               "drafted", "accepted", "rejects", "t_draft", "t_verify", "same", "match_prefix", "load", "swapins"]
     f = open(path_csv, "a" if done else "w", newline="")
-    w = csv.DictWriter(f, fields)
+    w = csv.DictWriter(f, fields, lineterminator="\n")
     if not done:
         w.writeheader()
     fo = open(path_out, "a" if done else "w", encoding="utf-8")
