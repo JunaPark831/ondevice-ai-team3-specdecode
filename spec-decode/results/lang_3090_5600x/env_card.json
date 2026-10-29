@@ -1,0 +1,29 @@
+{
+  "date_utc": "2026-10-29T11:44:15+00:00",
+  "vast": {
+    "container_label": "C.58242183",
+    "container_id": "58242183",
+    "public_ip": "99.62.248.205"
+  },
+  "gpu": "NVIDIA GeForce RTX 3090, 24576 MiB, 615.71.09, 94.02.26.40.81, 4, 16, 350.00 W, 2100 MHz, 9751 MHz",
+  "cpu": "CPU(s): 12\nModel name: AMD Ryzen 5 5600X 6-Core Processor\nThread(s) per core: 2\nCore(s) per socket: 6\nSocket(s): 1\nCPU(s) scaling MHz: 110%",
+  "cpu_visible_to_container": 12,
+  "cpu_affinity": 12,
+  "ram": "total        used        free      shared  buff/cache   available\nMem:              62          13           1           1          50          48",
+  "disk": "overlay          80G   26G   55G  33% /",
+  "os": "Linux-5.15.0-198-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "torch": "2.14.1+cu130",
+  "torch_cuda": "13.0",
+  "cudnn": 92400,
+  "transformers": "5.18.0",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "gpu_mem_gib": 23.61,
+  "sm_count": 82,
+  "capability": "8.6",
+  "bf16_supported": true,
+  "effective_bandwidth_GBps": 844.1,
+  "pcie_h2d_GBps": 13.41,
+  "other_gpu_processes": "1940, 768 MiB"
+}

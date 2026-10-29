@@ -1,0 +1,16 @@
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 9390.71it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 8388.34it/s]
+{"ctx_en": {"T_t(1) ms": 28.95813099166844, "c[Qwen3-1.7B]": 0.7347932953888056}, "ctx_ko": {"T_t(1) ms": 30.953164503443986, "c[Qwen3-1.7B]": 0.6963678298579613}}
+[1/12] en→de#871 vanilla 31.8→30.7 tok/s load 5 swapins 0 0.1 min, 남은 ~1 min
+[2/12] en→de#992 vanilla 32.6→33.7 tok/s load 5 swapins 0 0.2 min, 남은 ~1 min
+[3/12] en→de#338 vanilla 32.3→32.5 tok/s load 5 swapins 0 0.3 min, 남은 ~1 min
+[4/12] en→de#534 vanilla 35.3→33.6 tok/s load 5 swapins 0 0.4 min, 남은 ~1 min
+[5/12] en→de#684 vanilla 33.0→33.5 tok/s load 5 swapins 0 0.5 min, 남은 ~1 min
+[6/12] en→de#640 vanilla 33.3→31.1 tok/s load 5 swapins 0 0.5 min, 남은 ~1 min
+[7/12] en→de#803 vanilla 33.4→32.8 tok/s load 5 swapins 0 0.6 min, 남은 ~0 min
+[8/12] en→de#195 vanilla 31.5→33.1 tok/s load 5 swapins 0 0.7 min, 남은 ~0 min
+[9/12] en→de#617 vanilla 31.7→33.6 tok/s load 5 swapins 0 0.7 min, 남은 ~0 min
+[10/12] en→de#991 vanilla 33.6→31.3 tok/s load 5 swapins 0 0.9 min, 남은 ~0 min
+[11/12] en→de#188 vanilla 31.1→33.5 tok/s load 5 swapins 0 1.0 min, 남은 ~0 min
+[12/12] en→de#101 vanilla 33.8→33.2 tok/s load 5 swapins 0 1.1 min, 남은 ~0 min
+{"ctx_en": {"T_t(1) ms": 28.878805504064076, "c[Qwen3-1.7B]": 0.764744442432886}, "ctx_ko": {"T_t(1) ms": 32.92604899615981, "c[Qwen3-1.7B]": 0.6539722092103296}}

@@ -1,0 +1,123 @@
+{
+  "ctx_len": 78,
+  "torch_default_threads": 6,
+  "models": {
+    "Qwen3-8B": {
+      "layers": 36,
+      "threads": {
+        "6": {
+          "wall_ms": 28.81,
+          "cpu_ms_per_fwd": 31.19,
+          "gpu_util": 81.6,
+          "sm_mhz": 1950
+        },
+        "13": {
+          "wall_ms": 28.24,
+          "cpu_ms_per_fwd": 30.87,
+          "gpu_util": 85.8,
+          "sm_mhz": 1950
+        },
+        "4": {
+          "wall_ms": 28.84,
+          "cpu_ms_per_fwd": 31.51,
+          "gpu_util": 82.2,
+          "sm_mhz": 1920
+        },
+        "1": {
+          "wall_ms": 29.0,
+          "cpu_ms_per_fwd": 32.09,
+          "gpu_util": 76.9,
+          "sm_mhz": 1950
+        }
+      },
+      "launches_per_fwd": 2038,
+      "gpu_busy_ms": 23.39,
+      "wall_ms": 28.81,
+      "gpu_busy_ratio": 0.812,
+      "wall_ms_per_layer": 0.8,
+      "us_per_launch": 2.7
+    },
+    "Qwen3-0.6B": {
+      "layers": 28,
+      "threads": {
+        "6": {
+          "wall_ms": 26.13,
+          "cpu_ms_per_fwd": 28.49,
+          "gpu_util": 21.1,
+          "sm_mhz": 1965
+        },
+        "13": {
+          "wall_ms": 26.4,
+          "cpu_ms_per_fwd": 28.68,
+          "gpu_util": 21.4,
+          "sm_mhz": 1695
+        },
+        "4": {
+          "wall_ms": 29.8,
+          "cpu_ms_per_fwd": 31.6,
+          "gpu_util": 20.2,
+          "sm_mhz": 1695
+        },
+        "1": {
+          "wall_ms": 29.26,
+          "cpu_ms_per_fwd": 30.92,
+          "gpu_util": 23.2,
+          "sm_mhz": 1695
+        }
+      },
+      "launches_per_fwd": 1590,
+      "gpu_busy_ms": 5.44,
+      "wall_ms": 26.13,
+      "gpu_busy_ratio": 0.208,
+      "wall_ms_per_layer": 0.933,
+      "us_per_launch": 13.0
+    },
+    "Qwen3-1.7B": {
+      "layers": 28,
+      "threads": {
+        "6": {
+          "wall_ms": 26.8,
+          "cpu_ms_per_fwd": 28.78,
+          "gpu_util": 32.6,
+          "sm_mhz": 1890
+        },
+        "13": {
+          "wall_ms": 27.29,
+          "cpu_ms_per_fwd": 29.5,
+          "gpu_util": 32.1,
+          "sm_mhz": 1695
+        },
+        "4": {
+          "wall_ms": 26.54,
+          "cpu_ms_per_fwd": 29.67,
+          "gpu_util": 36.2,
+          "sm_mhz": 1695
+        },
+        "1": {
+          "wall_ms": 28.36,
+          "cpu_ms_per_fwd": 30.33,
+          "gpu_util": 35.3,
+          "sm_mhz": 1695
+        }
+      },
+      "launches_per_fwd": 1590,
+      "gpu_busy_ms": 8.05,
+      "wall_ms": 26.8,
+      "gpu_busy_ratio": 0.3,
+      "wall_ms_per_layer": 0.957,
+      "us_per_launch": 11.8
+    }
+  },
+  "c_measured": {
+    "Qwen3-0.6B": 0.907,
+    "Qwen3-1.7B": 0.93
+  },
+  "c_if_layer_bound": {
+    "Qwen3-0.6B": 0.778,
+    "Qwen3-1.7B": 0.778
+  },
+  "c_if_byte_bound": {
+    "Qwen3-0.6B": 0.073,
+    "Qwen3-1.7B": 0.25
+  }
+}

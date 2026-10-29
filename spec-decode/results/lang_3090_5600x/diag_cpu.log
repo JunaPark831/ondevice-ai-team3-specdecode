@@ -1,0 +1,23 @@
+ctx_ko 78 토큰, torch 기본 스레드 6
+Qwen3-8B     threads= 6  1토큰  28.81 ms  CPU  31.19 ms  GPU 사용률 81.6%  SM 1950 MHz
+Qwen3-8B     threads=13  1토큰  28.24 ms  CPU  30.87 ms  GPU 사용률 85.8%  SM 1950 MHz
+Qwen3-8B     threads= 4  1토큰  28.84 ms  CPU  31.51 ms  GPU 사용률 82.2%  SM 1920 MHz
+Qwen3-8B     threads= 1  1토큰  29.00 ms  CPU  32.09 ms  GPU 사용률 76.9%  SM 1950 MHz
+USDT:2026-10-29 12:23:16 2509:2509 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-29 12:23:16 2509:2509 SyncActivityProfilerHandler.cpp:46] profiler_stop
+Qwen3-8B     커널 실행 2038회 · GPU 실제 계산 23.39 ms / 전체 28.81 ms (81%) · 층당 0.80 ms
+Qwen3-0.6B   threads= 6  1토큰  26.13 ms  CPU  28.49 ms  GPU 사용률 21.1%  SM 1965 MHz
+Qwen3-0.6B   threads=13  1토큰  26.40 ms  CPU  28.68 ms  GPU 사용률 21.4%  SM 1695 MHz
+Qwen3-0.6B   threads= 4  1토큰  29.80 ms  CPU  31.60 ms  GPU 사용률 20.2%  SM 1695 MHz
+Qwen3-0.6B   threads= 1  1토큰  29.26 ms  CPU  30.92 ms  GPU 사용률 23.2%  SM 1695 MHz
+USDT:2026-10-29 12:23:23 2509:2509 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-29 12:23:23 2509:2509 SyncActivityProfilerHandler.cpp:46] profiler_stop
+Qwen3-0.6B   커널 실행 1590회 · GPU 실제 계산 5.44 ms / 전체 26.13 ms (21%) · 층당 0.93 ms
+Qwen3-1.7B   threads= 6  1토큰  26.80 ms  CPU  28.78 ms  GPU 사용률 32.6%  SM 1890 MHz
+Qwen3-1.7B   threads=13  1토큰  27.29 ms  CPU  29.50 ms  GPU 사용률 32.1%  SM 1695 MHz
+Qwen3-1.7B   threads= 4  1토큰  26.54 ms  CPU  29.67 ms  GPU 사용률 36.2%  SM 1695 MHz
+Qwen3-1.7B   threads= 1  1토큰  28.36 ms  CPU  30.33 ms  GPU 사용률 35.3%  SM 1695 MHz
+USDT:2026-10-29 12:23:31 2509:2509 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-29 12:23:31 2509:2509 SyncActivityProfilerHandler.cpp:46] profiler_stop
+Qwen3-1.7B   커널 실행 1590회 · GPU 실제 계산 8.05 ms / 전체 26.80 ms (30%) · 층당 0.96 ms
+{"c_measured": {"Qwen3-0.6B": 0.907, "Qwen3-1.7B": 0.93}, "c_if_layer_bound": {"Qwen3-0.6B": 0.778, "Qwen3-1.7B": 0.778}, "c_if_byte_bound": {"Qwen3-0.6B": 0.073, "Qwen3-1.7B": 0.25}}
