@@ -1,0 +1,106 @@
+--- a/spec-decode/lang.py
++++ b/spec-decode/lang.py
+@@ -33,6 +33,22 @@
+ DIRECTIONS = [(s, t) for s in CJK for t in CJK if s != t] + [("en", "de"), ("de", "en")]  # 12 + 유럽어 대조 2
+ 
+ 
++def device():
++    """MPS(맥) → CUDA(GPU 서버) → CPU 순. 환경변수 SD_DEVICE=cuda 처럼 강제할 수 있다 (W05: 3090 측정용으로 추가)"""
++    import torch
++    name = os.environ.get("SD_DEVICE") or ("mps" if torch.backends.mps.is_available() else
++                                            "cuda" if torch.cuda.is_available() else "cpu")
++    return torch.device(name)
++
++
++def empty_cache():
++    import torch
++    if torch.backends.mps.is_available():
++        torch.mps.empty_cache()
++    elif torch.cuda.is_available():
++        torch.cuda.empty_cache()
++
++
+ def prep(flores_dir, n=200, seed=0):
+     def read(code):
+         lines = (Path(flores_dir) / "devtest" / f"{code}.devtest").read_text(encoding="utf-8").splitlines()
+@@ -88,7 +104,7 @@
+     import torch
+     from transformers import AutoModelForCausalLM, AutoTokenizer
+ 
+-    dev = torch.device("mps")
++    dev = device()
+     out = Path(args.out)
+     out.mkdir(parents=True, exist_ok=True)
+     tok = AutoTokenizer.from_pretrained(args.target)
+@@ -131,7 +147,7 @@
+ def load_model(name):
+     import torch
+     from transformers import AutoModelForCausalLM
+-    return AutoModelForCausalLM.from_pretrained(name, dtype=torch.bfloat16).to("mps").eval()
++    return AutoModelForCausalLM.from_pretrained(name, dtype=torch.bfloat16).to(device()).eval()
+ 
+ 
+ def rows_with_prompts(out, tok, data=HERE / "data" / "flores.jsonl"):
+@@ -149,8 +165,8 @@
+     import torch
+     seqs = [r["prompt"] + r["out"] for r in batch]
+     L = max(map(len, seqs))
+-    x = torch.tensor([s + [pad] * (L - len(s)) for s in seqs], device="mps")
+-    m = torch.tensor([[1] * len(s) + [0] * (L - len(s)) for s in seqs], device="mps")
++    x = torch.tensor([s + [pad] * (L - len(s)) for s in seqs], device=model.device)
++    m = torch.tensor([[1] * len(s) + [0] * (L - len(s)) for s in seqs], device=model.device)
+     with torch.no_grad():
+         h = model.model(input_ids=x, attention_mask=m).last_hidden_state
+         P = [len(r["prompt"]) for r in batch]
+@@ -191,7 +207,7 @@
+             for r, tl, dl in zip(batch, T, D):
+                 # 첫 출력 토큰은 target prefill 이 만든다 (sd.py 도 draft 가 두 번째 토큰부터 제안) → j ≥ 1 만
+                 tl, dl = tl[1:], dl[1:]
+-                y = torch.tensor(r["out"][1:], device="mps")
++                y = torch.tensor(r["out"][1:], device=tl.device)
+                 lp, lq = tl.log_softmax(-1), dl.log_softmax(-1)
+                 p, q = lp.exp(), lq.exp()
+                 p7, q7 = (tl / 0.7).softmax(-1), (dl / 0.7).softmax(-1)
+@@ -276,8 +292,13 @@
+         return (so["n_new"] - 1) / (so["total"] - so["ttft"])
+ 
+     def swapins():  # 측정 중 메모리가 swap 으로 밀려났는지 (W03: 다른 작업의 메모리 압박으로 vanilla 15 → 2 tok/s 까지 떨어졌다)
+-        out_ = subprocess.run(["vm_stat"], capture_output=True, text=True).stdout
+-        return int(next(l for l in out_.splitlines() if l.startswith("Swapins")).split()[-1].rstrip("."))
++        if sys.platform == "darwin":
++            out_ = subprocess.run(["vm_stat"], capture_output=True, text=True).stdout
++            return int(next(l for l in out_.splitlines() if l.startswith("Swapins")).split()[-1].rstrip("."))
++        try:  # Linux: /proc/vmstat 의 pswpin (swap 에서 읽어 들인 page 수). 컨테이너에서 못 읽으면 -1
++            return int(next(l for l in open("/proc/vmstat") if l.startswith("pswpin")).split()[1])
++        except (OSError, StopIteration):
++            return -1
+ 
+     def run_block(bi, s, t, sid, attempt):
+         ids = encode(tok, prompt(s, t, sents[sid][s]))
+@@ -350,7 +371,7 @@
+             for b in range(0, len(rs), args.bs):
+                 batch = rs[b: b + args.bs]
+                 for r, tl, dl in zip(batch, out_logits(target, batch, tok.pad_token_id), out_logits(model, batch, tok.pad_token_id)):
+-                    y = torch.tensor(r["out"], device="mps")
++                    y = torch.tensor(r["out"], device=tl.device)
+                     rec = {k: r[k] for k in ("src", "tgt", "sid", "attempt", "draft", "gamma", "temp", "log")}
+                     rec.update(n_out=len(r["out"]), m=(dl.argmax(-1) == y).int().tolist(), t_ok=(tl.argmax(-1) == y).int().tolist())
+                     if r["temp"] > 0:
+@@ -358,7 +379,7 @@
+                         rec["beta"] = [round(v, 4) for v in (1 - 0.5 * ((tl / T).softmax(-1) - (dl / T).softmax(-1)).abs().sum(-1)).tolist()]
+                     fz.write(json.dumps(rec) + "\n")
+             del model
+-            torch.mps.empty_cache()
++            empty_cache()
+             print("replayed", n, len(rs), flush=True)
+ 
+ 
+@@ -386,7 +407,7 @@
+         for name, c in ctxs.items():
+             res[name]["drafts"][short(d)] = fwd_time(m, c, 1, reps=20)
+         del m
+-        torch.mps.empty_cache()
++        empty_cache()
+     for name in res:  # target 은 draft 를 다 잰 뒤 한 번 더 (세션 안 흔들림 확인용)
+         res[name]["target_again_1"] = fwd_time(target, ctxs[name], 1, reps=20)
+     (out / "costs_clean.json").write_text(json.dumps({"clean": res}, indent=2))

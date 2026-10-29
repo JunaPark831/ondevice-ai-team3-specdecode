@@ -1,0 +1,29 @@
+{
+  "date_utc": "2026-10-28T07:44:27+00:00",
+  "vast": {
+    "container_label": "C.58062735",
+    "container_id": "58062735",
+    "public_ip": "70.30.252.209"
+  },
+  "gpu": "NVIDIA GeForce RTX 3090, 24576 MiB, 580.82.09, 94.02.42.80.6C, 3, 16, 350.00 W, 2115 MHz, 9751 MHz",
+  "cpu": "CPU(s): 40\nModel name: Intel(R) Xeon(R) CPU E5-2673 v4 @ 2.30GHz\nThread(s) per core: 2\nCore(s) per socket: 20\nSocket(s): 1\nCPU(s) scaling MHz: 47%",
+  "cpu_visible_to_container": 40,
+  "cpu_affinity": 40,
+  "ram": "total        used        free      shared  buff/cache   available\nMem:             251           8         172           0          73         243",
+  "disk": "overlay          80G   26G   55G  33% /",
+  "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "python": "3.12.15",
+  "torch": "2.14.1+cu130",
+  "torch_cuda": "13.0",
+  "cudnn": 92400,
+  "transformers": "5.18.0",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "gpu_mem_gib": 23.56,
+  "sm_count": 82,
+  "capability": "8.6",
+  "bf16_supported": true,
+  "effective_bandwidth_GBps": 842.9,
+  "pcie_h2d_GBps": 11.99,
+  "other_gpu_processes": "1852, 768 MiB"
+}
